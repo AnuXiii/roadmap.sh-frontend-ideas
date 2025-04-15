@@ -89,6 +89,11 @@ This repository contains a collection of front-end projects inspired by the [Roa
 - A custom drop down component easy to customize it
 - ![Custom drop down](screen-shots/img-17-min.png)
 
+18. [The Task Tracker](https://roadmap-sh-frontend-challenges.vercel.app/18-task-tracker/index.html)
+
+- Task Tracker web application with home page
+- ![Task Tracker](screen-shots/img-18-min.png)
+
 ## Project List Links from roadmap.sh
 
 1.  [Single Page CV](https://roadmap.sh/projects/single-page-cv)
@@ -106,3 +111,4 @@ This repository contains a collection of front-end projects inspired by the [Roa
 13. [Age Calculator](https://roadmap.sh/projects/age-calculator)
 14. [Flash Cards](https://roadmap.sh/projects/flash-cards)
 15. [Custom drop down](https://roadmap.sh/projects/custom-dropdown)
+16. [Task Tacker](https://roadmap.sh/projects/task-tracker-js)
