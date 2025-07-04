@@ -15,11 +15,6 @@ selectBox.addEventListener("click", (e) => {
 		let newIndex = categories.indexOf(newCategory);
 		let direction = newIndex > previousIndex ? "slide-right" : "slide-left";
 
-		console.log(newCategory);
-		console.log(newIndex);
-		console.log(direction);
-		console.log(previousIndex);
-
 		previousIndex = newIndex;
 		showProject(newCategory, direction);
 	}
