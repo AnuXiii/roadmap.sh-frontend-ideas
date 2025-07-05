@@ -1,5 +1,18 @@
-import { programmingLanguages } from "../data.js";
+// import { programmingLanguages } from "../data.js";
 import { getRandomRepo } from "../app.js";
+
+let programmingLanguages = {};
+
+async function getProgrammingLanguages() {
+	const url =
+		"https://raw.githubusercontent.com/kamranahmedse/githunt/master/src/components/filters/language-filter/languages.json";
+	const response = await fetch(url);
+	const data = await response.json();
+
+	programmingLanguages = data;
+}
+
+await getProgrammingLanguages();
 
 class Select extends HTMLElement {
 	#isOpen = false;
@@ -17,19 +30,21 @@ class Select extends HTMLElement {
           <ion-icon name="arrow-down-outline" class="arrow"></ion-icon>
         </div>
         <ul id="options-list" class="options bg-black rounded-md border-gray">
+					<div class="input-holder">
+						<input type="search" id="search" class="search option p-1" placeholder="Search languages..."/>
+					</div>
           ${
 						programmingLanguages.length > 0
 							? programmingLanguages
 									.map(
-										(lang) => `
+										(lang, index) => `
                     <li 
-                      id="${lang.id}" 
-                      class="option p-1" 
-                      data-value="${lang.name}" 
-                      data-color="${lang.color}" 
+                      id="${index + 1}" 
+                      class="option p-1 ${lang.value == "" ? "hidden" : ""}" 
+                      data-value="${lang.value}" 
                       role="option"
                       tabindex="-1"
-                    >${lang.name}</li>
+                    >${lang.title}</li>
                   `
 									)
 									.join("")
@@ -44,7 +59,9 @@ class Select extends HTMLElement {
 	initSelect() {
 		const selectDisplay = this.querySelector(".select-display");
 		const arrow = this.querySelector(".arrow");
+		const searchInput = this.querySelector(".search");
 		const options = this.querySelector(".options");
+		const allOptions = this.querySelectorAll(".option:not(.search , .hidden)");
 		const input = this.querySelector("#value");
 
 		const toggleDropdown = () => {
@@ -62,12 +79,27 @@ class Select extends HTMLElement {
 			const selectDisplayValue = selectDisplay.querySelector(".selected");
 			selectDisplayValue.textContent = validTarget.dataset.value;
 			input.value = validTarget.dataset.value;
-			input.setAttribute("lang-color", validTarget.dataset.color);
 			toggleDropdown();
-			getRandomRepo(input.value, validTarget.dataset.color);
+			getRandomRepo(input.value);
+		};
+
+		const searchByName = () => {
+			const query = searchInput.value.trim().toLowerCase();
+
+			if (!query) {
+				allOptions.forEach((opt) => {
+					opt.style.display = "block";
+				});
+			}
+
+			allOptions.forEach((opt) => {
+				const match = opt.textContent.toLowerCase().includes(query);
+				opt.style.display = match ? "block" : "none";
+			});
 		};
 
 		selectDisplay.addEventListener("click", toggleDropdown);
+		searchInput.addEventListener("input", searchByName);
 		options.addEventListener("click", selectValue);
 
 		document.addEventListener("click", (e) => {

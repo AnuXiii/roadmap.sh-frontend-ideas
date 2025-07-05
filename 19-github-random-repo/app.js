@@ -11,10 +11,9 @@ const updateActionButton = (button, { text, hasError = false }) => {
 };
 
 // Function to get random repository from GitHub
-const getRandomRepo = async (language, langColor) => {
-	if (!language) {
-		updateActionButton(actionButton, { text: "Select a language", hasError: true });
-		return;
+const getRandomRepo = async (language) => {
+	if (language == "") {
+		language = "JavaScript";
 	}
 
 	const result = document.querySelector(".result");
@@ -52,7 +51,7 @@ const getRandomRepo = async (language, langColor) => {
 				<p class="repo-desc">${repo.description}</p>
 				<ul class="repo-info flex justify-between items-center gap-1">
 				<li title="Language" class="lang flex items-center gap-0.5">
-					<i class="lang-color" style="background-color:${langColor || "var(--primary-clr)"}"></i>
+					<i class="lang-color"></i>
 					<span>${repo.language || language}</span>
 				</li>
 				<li title="Stars" class="stars flex items-center gap-0.5">
@@ -91,8 +90,7 @@ const getRandomRepo = async (language, langColor) => {
 const actionButton = document.getElementById("action-btn");
 actionButton.addEventListener("click", () => {
 	const input = document.querySelector("#value");
-	const langColor = input.getAttribute("lang-color");
-	getRandomRepo(input.value, langColor);
+	getRandomRepo(input.value);
 });
 
 export { getRandomRepo };
