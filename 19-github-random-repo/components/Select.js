@@ -1,4 +1,3 @@
-// import { programmingLanguages } from "../data.js";
 import { getRandomRepo } from "../app.js";
 
 let programmingLanguages = {};

@@ -1,4 +1,4 @@
-import loader from "./components/loader.js";
+import loader from "./components/Loader.js";
 import "./components/Select.js";
 
 // Utility function to update action button state
