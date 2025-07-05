@@ -117,4 +117,4 @@ This repository contains a collection of front-end projects inspired by the [Roa
 14. [Flash Cards](https://roadmap.sh/projects/flash-cards)
 15. [Custom drop down](https://roadmap.sh/projects/custom-dropdown)
 16. [Task Tacker](https://roadmap.sh/projects/task-tracker-js)
-17. [Task Tacker](https://roadmap.sh/projects/github-random-repo)
+17. [Github Random repo](https://roadmap.sh/projects/github-random-repo)
