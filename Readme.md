@@ -99,7 +99,7 @@ This repository contains a collection of front-end projects inspired by the [Roa
 - Show random github repository
 - ![Github Random repo](screen-shots/img-19-min.png)
 
-19. [Subreddt Client](https://subreddit-client.vercel.app)
+20. [Subreddt Client](https://subreddit-client.vercel.app)
 
 - Subreddit Client
 - ![Subreddt Client](screen-shots/img-20-min.png)
