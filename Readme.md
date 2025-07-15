@@ -84,25 +84,30 @@ This repository contains a collection of front-end projects inspired by the [Roa
     - A dark mode toggle to switch between light and dark themes.
     - ![Dark Mode](screen-shots/img-16-min.png)
 
-17. [Custom drop down](https://roadmap-sh-frontend-challenges.vercel.app/17-custom-dropdown/index.html)
+17. [Custom Drop Down](https://roadmap-sh-frontend-challenges.vercel.app/17-custom-dropdown/index.html)
 
-- A custom drop down component easy to customize it
-- ![Custom drop down](screen-shots/img-17-min.png)
+    - A customizable drop-down component.
+    - ![Custom Drop Down](screen-shots/img-17-min.png)
 
-18. [The Task Tracker](https://roadmap-sh-frontend-challenges.vercel.app/18-task-tracker/index.html)
+18. [Task Tracker](https://roadmap-sh-frontend-challenges.vercel.app/18-task-tracker/index.html)
 
-- Task Tracker web application with home page
-- ![Task Tracker](screen-shots/img-18-min.png)
+    - A task tracker web application with a home page.
+    - ![Task Tracker](screen-shots/img-18-min.png)
 
-19. [Github Random repo](https://roadmap-sh-frontend-challenges.vercel.app/19-github-random-repo/index.html)
+19. [GitHub Random Repo](https://roadmap-sh-frontend-challenges.vercel.app/19-github-random-repo/index.html)
 
-- Show random github repository
-- ![Github Random repo](screen-shots/img-19-min.png)
+    - Displays a random GitHub repository.
+    - ![GitHub Random Repo](screen-shots/img-19-min.png)
 
-19. [Subreddt Client](https://subreddit-client.vercel.app)
+20. [Subreddit Client](https://subreddit-client.vercel.app)
 
-- Subreddit Client
-- ![Subreddt Client](screen-shots/img-20-min.png)
+    - A simple client for browsing subreddits.
+    - ![Subreddit Client](screen-shots/img-20-min.png)
+
+21. [Temperature Convertor](https://temperature-convertor-sooty.vercel.app/)
+
+    - A simple client for browsing subreddits.
+    - ![Temperature Convertor](screen-shots/img-21-min.png)
 
 ## Project List Links from roadmap.sh
 
@@ -124,3 +129,4 @@ This repository contains a collection of front-end projects inspired by the [Roa
 16. [Task Tacker](https://roadmap.sh/projects/task-tracker-js)
 17. [Github Random repo](https://roadmap.sh/projects/github-random-repo)
 18. [Subreddit Client](https://roadmap.sh/projects/reddit-client)
+19. [Temperature Convertor](https://temperature-convertor-sooty.vercel.app/)
