@@ -106,7 +106,7 @@ This repository contains a collection of front-end projects inspired by the [Roa
 
 21. [Temperature Convertor](https://temperature-convertor-sooty.vercel.app/)
 
-    - A simple client for browsing subreddits.
+    - Simple Temperature Convertor.
     - ![Temperature Convertor](screen-shots/img-21-min.png)
 
 ## Project List Links from roadmap.sh
