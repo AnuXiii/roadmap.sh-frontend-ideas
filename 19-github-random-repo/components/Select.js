@@ -8,7 +8,9 @@ async function getProgrammingLanguages() {
 	const response = await fetch(url);
 	const data = await response.json();
 
-	programmingLanguages = data;
+	if (programmingLanguages) {
+		programmingLanguages = data;
+	}
 }
 
 await getProgrammingLanguages();

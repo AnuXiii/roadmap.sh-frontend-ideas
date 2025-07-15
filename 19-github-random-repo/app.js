@@ -10,12 +10,10 @@ const updateActionButton = (button, { text, hasError = false }) => {
 	button.classList.remove("hidden");
 };
 
+let cachedData = null;
+
 // Function to get random repository from GitHub
 const getRandomRepo = async (language) => {
-	if (language == "") {
-		language = "JavaScript";
-	}
-
 	const result = document.querySelector(".result");
 	const actionButton = document.getElementById("action-btn");
 
@@ -25,14 +23,14 @@ const getRandomRepo = async (language) => {
 
 		const url = `https://api.github.com/search/repositories?q=language:${language}&sort=stars&order=desc`;
 		const response = await fetch(url);
-		const data = await response.json();
+		cachedData = await response.json();
 
-		if (!data.items || data.items.length === 0) {
+		if (!cachedData.items || cachedData.items.length === 0) {
 			throw new Error("No repositories found for this language.");
 		}
 
-		const randomIndex = Math.floor(Math.random() * data.items.length);
-		const repo = data.items[randomIndex];
+		const randomIndex = Math.floor(Math.random() * cachedData.items.length);
+		const repo = cachedData.items[randomIndex];
 
 		const html = /*html*/ `
 			<div class="repo flex flex-col gap-1" role="region" aria-live="polite">
